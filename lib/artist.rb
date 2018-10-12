@@ -20,7 +20,7 @@ class Artist
   
   def genres 
     my_songs = Song.all.select {|song| song.artist == self }
-    my_genres = my_songs.map { |song| song.genre }
+    my_songs.map { |song| song.genre }
   end 
 
 end 
