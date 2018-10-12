@@ -15,10 +15,6 @@ class Genre
     @@all
   end
   
-  # def songs 
-  #   Song.all.select { |song| song.name }
-  # end 
-  
   def artists                     
     my_songs = Song.all.select { |song| song.genre == self }
     my_songs.map { |song| song.artist }
